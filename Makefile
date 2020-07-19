@@ -4,11 +4,11 @@
 
 # Compiler settings - Can be customized.
 CC = gcc
-CXXFLAGS = -fPIC -std=c++17 -Wall -fpermissive
-LDFLAGS = 
+CXXFLAGS = -fPIC -std=c++17 -Wall -fpermissive -DREDISMODULE_EXPERIMENTAL_API
+LDFLAGS = -shared
 
 # Makefile settings - Can be customized.
-APPNAME = redisg
+APPNAME = redisg.so
 EXT = .cpp
 SRCDIR = src
 OBJDIR = obj
