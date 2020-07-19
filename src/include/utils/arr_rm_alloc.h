@@ -5,12 +5,10 @@
  * friends. This file should not be included alongside arr.h, and should not be included from .h
  * files in general */
 
-#include "../redisgears_memory.h"
-
 /* Define the allcation functions before including arr.h */
-#define array_alloc_fn RG_ALLOC
-#define array_realloc_fn RG_REALLOC
-#define array_free_fn RG_FREE
+#define array_alloc_fn RedisModule_Alloc
+#define array_realloc_fn RedisModule_Realloc
+#define array_free_fn RedisModule_Free
 
 #include "arr.h"
 

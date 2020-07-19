@@ -6,14 +6,12 @@
 extern "C" {
 #endif
 
-
-
     int RedisGears_OnLoad(RedisModuleCtx *ctx) {
-    if(RedisGears_InitAsGearPlugin(ctx, "mygplugin",1) != REDISMODULE_OK){
-        RedisModule_Log(ctx, "warning", "Failed initialize RedisGears API");
-        return REDISMODULE_ERR;
+        if(RedisGears_InitAsGearPlugin(ctx, "mygplugin",1) != REDISMODULE_OK){
+            RedisModule_Log(ctx, "warning", "Failed initialize RedisGears API");
+            return REDISMODULE_ERR;
         }
-
+        return REDISMODULE_OK;
     }
     
 
