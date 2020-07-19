@@ -5,7 +5,9 @@
  * friends. This file should not be included alongside arr.h, and should not be included from .h
  * files in general */
 
+
 /* Define the allcation functions before including arr.h */
+
 #define array_alloc_fn RedisModule_Alloc
 #define array_realloc_fn RedisModule_Realloc
 #define array_free_fn RedisModule_Free
